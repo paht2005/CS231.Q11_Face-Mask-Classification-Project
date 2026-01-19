@@ -84,6 +84,7 @@ CS231.Q11_Face-Mask-Classification-Project/
 ├── static/                     # Static Assets
 │   ├── images/                 # Images for Slide, Report, and Thumbnails
 │   ├── results/                # Output images from Flask Web Demo
+│   ├──  latex/                # Latex files
 │   ├── templates/              # Web UI (index.html, indexSVM.html)
 │   └── test/                   # Sample test images (e.g., test.jpg)
 │
