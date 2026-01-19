@@ -288,22 +288,29 @@ python demo_webcam.py
 
 ## **Demo Application**
 
-The real-time inference pipeline integrates the following stabilization techniques:
+The project provides two distinct interfaces to demonstrate the classification capabilities, catering to both static analysis and real-time monitoring.
 
-- **Temporal Smoothing**: Aggregates predictions across consecutive frames to reduce sudden label changes.
-- **Centroid-based Tracking**: Maintains object identity across frames by tracking facial centroids.
-
-These techniques significantly mitigate label flickering and improve visual consistency in live video streams.  
-The system achieves **over 25 FPS** on standard consumer-grade hardware.
+### **1. Flask Web Application (Static Image Classification)**
+A user-friendly web interface built on the **Flask Framework**, allowing users to upload individual images for detailed analysis.
+- **Logic**: Receives image files via `indexSVM.html`, extracts **HOG 8x2** features using `skimage`, and performs inference using the optimized **SVM** model (`.joblib`).
+- **Output**: Generates a bounding box and label directly on the browser, displaying the prediction result along with a confidence score.
 
 <p align="center">
   <img src="static/images/demo/flask_web_demo.png" alt="Flask Web Demo Interface" width="800">
 </p>
 
+### **2. Real-time Inference Pipeline (Webcam)**
+Designed for high-speed monitoring, this pipeline utilizes a specialized deep learning flow to ensure stability and performance in live video streams.
+- **Face Detection**: Integrates **YuNet** (`yunet.onnx`) via OpenCV's `FaceDetectorYN` for ultra-lightweight and fast facial localization.
+- **Classification**: Uses the **CNN** model (`mask_detector_model.h5`) on grayscale input. To optimize performance, detected faces are processed in **batches**.
+- **Stabilization Techniques**:
+    - **Temporal Smoothing**: Employs a `deque` buffer to average predictions over recent frames, effectively eliminating "label flickering".
+    - **Centroid-based Tracking**: Maintains consistent object identity across the temporal domain using Euclidean distance tracking.
+- **Performance**: Achieves a smooth processing rate of **over 25 FPS**, meeting the requirements for real-time surveillance.
+
 <p align="center">
   <img src="static/images/demo_gif.gif" alt="Video real-time demo" width="800">
 </p>
-
 ---
 
 ### **Test Accuracy Comparison**
