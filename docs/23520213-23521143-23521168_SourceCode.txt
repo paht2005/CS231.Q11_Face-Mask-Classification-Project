@@ -1,0 +1,22 @@
+==========================================================================
+ĐỒ ÁN MÔN HỌC: NHẬP MÔN THỊ GIÁC MÁY TÍNH (CS231.Q11)
+Đề tài: Phân loại khuôn mặt đeo khẩu trang (Face Mask Classification)
+==========================================================================
+
+I. THÔNG TIN NHÓM THỰC HIỆN
+--------------------------------------------------------------------------
+1. Nguyễn Công Phát          - 23521143 (Nhóm trưởng - 35%)
+2. Nguyễn Lê Phong           - 23521168 (Thành viên - 35%) 
+3. Vũ Việt Cương             - 23520213 (Thành viên - 30%) 
+
+Giảng viên hướng dẫn: TS. [cite_start]Mai Tiến Dũng [cite: 9, 34, 35]
+==========================================================================
+II. LIÊN KẾT DỰ ÁN
+--------------------------------------------------------------------------
+1. Kho mã nguồn (GitHub): 
+   https://github.com/paht2005/CS231.Q11_Face-Mask-Classification-Project
+2. Video Demo hệ thống: 
+   https://drive.google.com/file/d/1rOsc_2w611sSdROxz6BNOVYT7l2G7_MC/view
+
+--------------------------------------------------------------------------
+UIT - Đại học Công nghệ Thông tin (ĐHQG-HCM) - 01/2026 
