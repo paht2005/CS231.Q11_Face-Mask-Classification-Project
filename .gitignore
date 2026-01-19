@@ -1,32 +1,37 @@
-# --- Machine Learning Models ---
-# Ignore all trained models because they are too large (>1GB for SVM/HOG)
-# Group has provided a download link in README.md
-models/
+# --- Machine Learning Models & Data ---
+models/*
+# Cho phép add 2 file model cụ thể này
+!models/yunet.onnx
+!models/mask_detector_model.h5
 
-# --- Python & Environment & Caches ---
+dataset/
+data/
+*.zip
+*.tar.gz
+*.npz
+*.npy
+
+# Chặn các folder cache cụ thể
+src/*/cache/
+
+# --- Python & Environment ---
 __pycache__/
 *.py[cod]
-*$py.class
 .venv
 venv/
-ENV/
-env.bak/
-venv.bak/
 .cache/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.nv/
-.torch/
-.keras/
-
-# --- Jupyter Notebook ---
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
+
+# --- Media & Large Docs ---
+*.mp4
+*.avi
+# Nếu Slide và Report quá nặng cũng nên cân nhắc bỏ
+# docs/
 
 # --- Flask & Web Demo ---
 uploads/*
 static/results/*
+static/test/*
 !uploads/.gitkeep
 !static/results/.gitkeep
 
@@ -35,16 +40,3 @@ static/results/*
 Thumbs.db
 .vscode/
 .idea/
-*.swp
-
-# --- Data & Build ---
-dataset/
-data/
-*.zip
-*.tar.gz
-build/
-dist/
-*.egg-info/
-
-# --- Logs ---
-*.log
