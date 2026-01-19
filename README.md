@@ -221,5 +221,53 @@ These models operate on extracted HOG or LBP feature vectors.
 
 ---
 
+## **Installation**
 
+### 1. Clone repository
+```bash
+git clone https://github.com/paht2005/CS231.Q11_Face-Mask-Classification-Project.git
+cd CS231.Q11_Face-Mask-Classification-Project
+```
 
+### 2. Create virtual environment (recommended)
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate    # Windows
+```
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+--- 
+
+## Usage
+### 1. Train models
+Open and run notebooks in **src/**:
+```bash
+jupyter notebook
+```
+- CNN/train-model-CNN-best-grayscale.ipynb
+- HOG_KNN/train-model-HOG-KNN_6x3.ipynb
+- HOG_KNN/train-model-HOG-KNN_8x2.ipynb
+- HOG_RF/train-model-HOG-RF_8x2.ipynb
+- HOG_RF/train-model-HOG-RF_6x3.ipynb
+- HOG_SVM/train-model-HOG-SVM_6x3.ipynb
+- HOG_SVM/train-model-HOG-SVM-8x2.ipynb
+- LBP_KNN/train-model-LBP-KNN.ipynb
+- LBP_RF/train-model-LBP-RF.ipynb
+- LBP_SVM/train-model-LBP-SVM.ipynb
+
+### 2. Run Flask demo
+```bash
+python demoSVM_image_flask.py
+```
+Open browser at:
+```bash
+http://127.0.0.1:5000
+```
+### 3. Real-time Webcam Detection
+```bash
+python demo_webcam.py
+```
